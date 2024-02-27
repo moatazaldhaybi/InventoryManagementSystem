@@ -66,7 +66,7 @@ public class Dashboard extends javax.swing.JFrame {
                 new UserDAO().addUserLogin(userDTO);
                 super.windowClosing(e);
             }
-        });
+        }); 
 
         setTitle("Inventory Manager");
         setVisible(true);
@@ -121,6 +121,7 @@ public class Dashboard extends javax.swing.JFrame {
         suppButton = new javax.swing.JButton();
         salesButton = new javax.swing.JButton();
         usersButton = new javax.swing.JButton();
+        statButton = new javax.swing.JButton();
         purchaseButton = new javax.swing.JButton();
         logsButton = new javax.swing.JButton();
         displayPanel = new javax.swing.JPanel();
@@ -218,6 +219,14 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
+        statButton.setText("Statistiques");
+        statButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        statButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usersButtonActionPerformed(evt);
+            }
+        });
+
         purchaseButton.setText("Purchase");
         purchaseButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         purchaseButton.addActionListener(new java.awt.event.ActionListener() {
@@ -249,6 +258,7 @@ public class Dashboard extends javax.swing.JFrame {
                     .addComponent(salesButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(usersButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(purchaseButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(statButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(logsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -271,6 +281,8 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(purchaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(usersButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(statButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(logsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(24, Short.MAX_VALUE))
@@ -454,5 +466,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton suppButton;
     private javax.swing.JPanel userPanel;
     private javax.swing.JButton usersButton;
+    private javax.swing.JButton statButton;
     // End of variables declaration//GEN-END:variables
 }

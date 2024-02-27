@@ -61,7 +61,7 @@ public class LoginPage extends javax.swing.JFrame {
         setName("loginFrame"); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel1.setText("Username:");
+        jLabel1.setText("UserName:");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Password:");
@@ -165,7 +165,7 @@ public class LoginPage extends javax.swing.JFrame {
     String userType;
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         String username = userText.getText();
-        String password = passText.getText();
+        String password = String.valueOf(passText.getPassword());
         //TODO Password encryption to be added later:
         //String password = encryptPass(pass);
         userType = (String)jComboBox1.getSelectedItem();
